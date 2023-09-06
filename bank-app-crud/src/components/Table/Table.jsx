@@ -2,20 +2,11 @@ import React, { useState } from 'react';
 import styles from './table.css';
 import dots from '../../imgs/dots.svg';
 
-function Table({ products, openForm, setOpenForm }) {
+function Table({ products, openForm, setOpenForm ,handleOpenForm}) {
   console.log(openForm)
   const [searchText, setSearchText] = useState('');
   const filterProducts = (e) => setSearchText(e.target.value);
   
-  const handleOpenForm = (productId) => {
-    console.log('executed')
-    console.log(productId)
-    setOpenForm(() => ({
-      open: true,
-      id: productId,
-    }));
-  };
-
   const limitRows = () => {
     Array.from(document.querySelectorAll('.productsTable tr'))
       .forEach((row, index) => {
@@ -74,8 +65,8 @@ function Table({ products, openForm, setOpenForm }) {
                 <td id='menu'>
                   <img src={dots} alt='' />
                     <span id="menu-options">
-                  <small onClick={() => handleOpenForm(product.id)}>Editar</small>
-                  <small onClick={() => handleOpenForm(product.id)}>Eliminar</small>
+                  <small onClick={() => handleOpenForm(product.id,'edit')}>Editar</small>
+                  <small onClick={() => handleOpenForm(product.id,'delete')}>Eliminar</small>
                 </span>
                 </td>
               </tr>

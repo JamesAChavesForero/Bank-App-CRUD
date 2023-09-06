@@ -7,7 +7,17 @@ const API_URL = "https://tribu-ti-staffing-desarrollo-afangwbmcrhucqfh.z01.azure
 
 function App() {
   const [products, setProducts] = useState([]);
-  const [openForm, setOpenForm] = useState({ open: false, id: null });
+  const [openForm, setOpenForm] = useState({ open: false, id: null, action : null });
+
+  const handleOpenForm = (productId) => {
+    
+    setOpenForm(() => ({
+      open: true,
+      id: productId,
+      action : null 
+    }));
+  };
+
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -41,9 +51,9 @@ function App() {
       </div>
 
       {!openForm.open ? (
-        <Table products={products} openForm={openForm} setOpenForm={setOpenForm} />
+        <Table products={products} handleOpenForm={handleOpenForm} openForm={openForm} setOpenForm={setOpenForm} />
       ) : (
-        <Form openForm={openForm} setOpenForm={setOpenForm} />
+        <Form handleOpenForm={handleOpenForm} openForm={openForm} setOpenForm={setOpenForm} />
       )}
     </div>
   );

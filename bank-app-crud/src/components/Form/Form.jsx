@@ -8,7 +8,10 @@ function Form({ openForm, setOpenForm }) {
       .join('');
   }
   const randomShortId = generateShortId(8);
-  console.log(document.querySelector(`#${openForm.id}`))
+  let names = Array.from(document.querySelectorAll(`#${openForm.id} td`))[1]
+  let desc = Array.from(document.querySelectorAll(`#${openForm.id} td`))[2]
+  let issueDate = Array.from(document.querySelectorAll(`#${openForm.id} td`))[4]
+  console.log()
   function setRevisionDate() {
     const issueDate = new Date(document.getElementById('issueDate').value);
     const revisionDate = new Date(issueDate);
@@ -23,11 +26,11 @@ function Form({ openForm, setOpenForm }) {
           Formulario de Registro
         </label>
         <span className="inputWrap">
-          <input className="productField" required placeholder="ID" disabled value={openForm ? openForm.id : randomShortId}/>
-          <input className="productField" required placeholder="Name" />
+          <input className="productField" required placeholder="ID" disabled value={ openForm.id || randomShortId}/>
+          <input className="productField" required placeholder="Name" value={`${names.innerHTML}`} />
         </span>
         <span className="inputWrap">
-          <input className="productField" required placeholder="Descripcion" />
+          <input className="productField" required placeholder="Descripcion"/>
           <input className="productField" required placeholder="Logo" />
         </span>
         <span className="inputWrap">
