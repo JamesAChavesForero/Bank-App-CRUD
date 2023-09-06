@@ -18,13 +18,21 @@ A warm welcome to my React.js project! 😊 I poured my heart and soul into this
 Please feel free to reach out if you have any questions, suggestions, or feedback. Let's dive in!
 
 ## Features
+- Testing set up 
+- Search / Filter data
+- SPA navigation
+- row count select functionality
+- Responsive for any screen or device.
+- deactivation of buttons when required.
+- basic validationsy.
+- API functionality for CRUD
 
-- List some of the key features of your project here.
-- Highlight what makes your project unique and useful.
-- You can include bullet points, images, or GIFs to showcase functionality.
 
-Example:
-- **Feature 1**: Describe Feature 1 here.
-![Feature 1 Image](path/to/feature1.png)
 
 ### Planning 
+![WhatsApp Image 2023-09-06 at 8 02 00 AM (1)](https://github.com/JamesAChavesForero/Bank-App-CRUD/assets/143219390/9e757bdd-3245-46e3-a720-63127c7ba05b)
+
+![WhatsApp Image 2023-09-06 at 8 02 00 AM](https://github.com/JamesAChavesForero/Bank-App-CRUD/assets/143219390/e67d4dd1-a6e2-44e6-aeca-add134a4a808)
+
+![WhatsApp Image 2023-09-06 at 8 02 00 AM (2)](https://github.com/JamesAChavesForero/Bank-App-CRUD/assets/143219390/e77f7eaf-0d97-4097-8f4b-98c2aed243c0)
+
