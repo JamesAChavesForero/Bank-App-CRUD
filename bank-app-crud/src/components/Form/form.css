@@ -1,0 +1,98 @@
+section.formWrapper {
+    min-width: 60%;
+    height: 70vh;
+    margin: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: 1s;
+  }
+  form.register {
+    width: 100%;
+    max-height: 550px;
+    background-color: white;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    box-shadow: 5px 7px 10px rgba(93, 92, 92, 0.589);
+  }
+  form.register label{
+    width: 100%;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.5);
+    margin-bottom: 10px;
+    font-weight: bolder;
+    font-size: x-large;
+    padding: 10px;
+  }
+  span.inputWrap{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+  }
+  input.productField {
+    height: 45px;
+    width: 100%;
+    margin: 2% 1%;
+    outline: none;
+    padding-left: 30px;
+    padding-right: 66px;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--GrayBlue);
+    transition: 0.5s;
+    flex-direction: ;
+  }
+  input.productField:focus:invalid,
+  input:invalid {
+    border: 0.3px solid rgba(255, 42, 42, 0.595);
+  }
+  
+  input:disabled{
+    border:2px solid lightgrey;
+    color: rgb(193, 188, 188);
+  }
+  span.btnWrap{
+    display: flex;
+    justify-content: space-around;
+
+  }
+  button.formBtn {
+    width: 75px;
+    height: 35px;
+    background-color: var(--disabledGreen);
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 8px;
+    transition: ease-out 0.3s;
+    color: #24396ac0;
+    font-size: 12px;
+  }
+  button#restart{
+        background-color: #E9ECF3;
+  }
+  button#restart:hover{
+    background-color: #24396acb;
+    color: white;
+  }
+  button#send{
+    background-color: #FFF199;
+}
+button#send:hover{
+    background-color: #FFE908;
+    color: #051a4d;
+}
+  
+  form.register:invalid button:hover {
+    cursor: pointer;
+
+  }
+  button.formBtn:disabled {
+background-color: #FFF199;
+  }
