@@ -8,9 +8,8 @@ function Form({ openForm, setOpenForm }) {
       .join('');
   }
   const randomShortId = generateShortId(8);
-  console.log(openForm)
+  console.log(document.querySelector(`#${openForm.id}`))
   function setRevisionDate() {
-    console.log('runs')
     const issueDate = new Date(document.getElementById('issueDate').value);
     const revisionDate = new Date(issueDate);
     revisionDate.setFullYear(issueDate.getFullYear() + 1);

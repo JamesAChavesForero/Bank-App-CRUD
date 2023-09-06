@@ -6,14 +6,16 @@ function Table({ products, openForm, setOpenForm }) {
   console.log(openForm)
   const [searchText, setSearchText] = useState('');
   const filterProducts = (e) => setSearchText(e.target.value);
+  
   const handleOpenForm = (productId) => {
     console.log('executed')
     console.log(productId)
     setOpenForm(() => ({
       open: true,
-      id: null,
+      id: productId,
     }));
   };
+
   const limitRows = () => {
     Array.from(document.querySelectorAll('.productsTable tr'))
       .forEach((row, index) => {
@@ -61,7 +63,7 @@ function Table({ products, openForm, setOpenForm }) {
               )
             )
             .map((product) => (
-              <tr key={product.id}>
+              <tr id={product.id}>
                 <td>
                   <img className='productLogo' src={product.logo} alt='' />
                 </td>

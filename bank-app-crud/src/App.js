@@ -43,7 +43,7 @@ function App() {
       {!openForm.open ? (
         <Table products={products} openForm={openForm} setOpenForm={setOpenForm} />
       ) : (
-        <Form state={openForm} setState={setOpenForm} />
+        <Form openForm={openForm} setOpenForm={setOpenForm} />
       )}
     </div>
   );
