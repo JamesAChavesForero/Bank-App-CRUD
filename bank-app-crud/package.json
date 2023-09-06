@@ -19,7 +19,7 @@
     "predeploy" : "npm run build",
     "deploy" : "gh-pages -d build"
   },
-  "homepage": "https://JamesAChavesForero.github.io/Bank-App-CRUD",
+  "homepage": "https://JamesAChavesForero.github.io/bank-app-crud",
   "eslintConfig": {
     "extends": [
       "react-app",
