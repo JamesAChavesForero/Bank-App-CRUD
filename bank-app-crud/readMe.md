@@ -6,10 +6,8 @@
 
 - [Introduction](#introduction)
 - [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+- [Planning](#Planning)
+
 
 ## Introduction
 
@@ -29,7 +27,7 @@ Please feel free to reach out if you have any questions, suggestions, or feedbac
 
 
 
-### Planning 
+## Planning 
 ![WhatsApp Image 2023-09-06 at 8 02 00 AM (1)](https://github.com/JamesAChavesForero/Bank-App-CRUD/assets/143219390/9e757bdd-3245-46e3-a720-63127c7ba05b)
 
 ![WhatsApp Image 2023-09-06 at 8 02 00 AM](https://github.com/JamesAChavesForero/Bank-App-CRUD/assets/143219390/e67d4dd1-a6e2-44e6-aeca-add134a4a808)
