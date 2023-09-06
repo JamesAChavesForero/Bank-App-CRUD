@@ -9,8 +9,8 @@ function App() {
   const [products, setProducts] = useState([]);
   const [openForm, setOpenForm] = useState({ open: false, id: null, action : null });
 
-  const handleOpenForm = (productId) => {
-    
+  const handleOpenForm = (productId,row) => {
+    console.log(row)
     setOpenForm(() => ({
       open: true,
       id: productId,
