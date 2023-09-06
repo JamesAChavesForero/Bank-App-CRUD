@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/bank-app-crud/static/css/main.a4155884.css",
+    "main.js": "/bank-app-crud/static/js/main.da167539.js",
+    "index.html": "/bank-app-crud/index.html",
+    "static/media/dots.svg": "/bank-app-crud/static/media/dots.4f22a840e92f45eb1ba988d3eb92372a.svg",
+    "main.a4155884.css.map": "/bank-app-crud/static/css/main.a4155884.css.map",
+    "main.da167539.js.map": "/bank-app-crud/static/js/main.da167539.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a4155884.css",
+    "static/js/main.da167539.js"
+  ]
+}
