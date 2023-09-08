@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import styles from './table.css';
+import './table.css';
 import dots from '../../imgs/dots.svg';
 
-function Table({ products, openForm, setOpenForm ,handleOpenForm}) {
-  console.log(openForm)
+function Table({ products, deleteProduct, handleOpenForm }) {
   const [searchText, setSearchText] = useState('');
   const filterProducts = (e) => setSearchText(e.target.value);
-  
+
   const limitRows = () => {
     Array.from(document.querySelectorAll('.productsTable tr'))
       .forEach((row, index) => {
@@ -15,7 +14,6 @@ function Table({ products, openForm, setOpenForm ,handleOpenForm}) {
   };
 
   limitRows();
-
 
   return (
     <section className='tableWrapper'>
@@ -29,7 +27,7 @@ function Table({ products, openForm, setOpenForm ,handleOpenForm}) {
         </span>
         <button
           className='add'
-          onClick={() => handleOpenForm()}
+          onClick={() => handleOpenForm(true)}
         >
           Agregar
         </button>
@@ -53,8 +51,9 @@ function Table({ products, openForm, setOpenForm ,handleOpenForm}) {
                 val.toString().includes(searchText)
               )
             )
+            .slice(0, )
             .map((product) => (
-              <tr id={product.id}>
+              <tr key={product.id} id={product.id}>
                 <td>
                   <img className='productLogo' src={product.logo} alt='' />
                 </td>
@@ -64,10 +63,10 @@ function Table({ products, openForm, setOpenForm ,handleOpenForm}) {
                 <td>{product.date_revision.split('T')[0]}</td>
                 <td id='menu'>
                   <img src={dots} alt='' />
-                    <span id="menu-options">
-                  <small onClick={() => handleOpenForm(product.id,'edit')}>Editar</small>
-                  <small onClick={() => handleOpenForm(product.id,'delete')}>Eliminar</small>
-                </span>
+                  <span id="menu-options">
+                    <small onClick={() => handleOpenForm(true, product)}>Editar</small>
+                    <small onClick={() => {window.confirm('estas seguro que quieres borrar este producto?') && deleteProduct(product.id)} }>Eliminar</small>
+                  </span>
                 </td>
               </tr>
             ))}
@@ -77,7 +76,7 @@ function Table({ products, openForm, setOpenForm ,handleOpenForm}) {
         <span className='productCount'>{products.length} Resultados</span>
         <select className='rowSelect' onChange={limitRows}>
           {[5, 10, 15, 20, 25, products.length].map((value) => (
-            <option key={value} value={value}>
+            <option value={value}>
               {value}
             </option>
           ))}

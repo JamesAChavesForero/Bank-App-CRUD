@@ -9,7 +9,7 @@ import nock from 'nock';
 //   expect(linkElement).toBeInTheDocument();
 // });
 
-test("Consume API with ", async () => {
+test("Consume API with POST", async () => {
   const productMock = {
     "id" : "jhhh-crd",
     "name" : "Prestamos en Crypto",
@@ -29,3 +29,65 @@ test("Consume API with ", async () => {
     });
   
 });
+
+test("Consume API with POST", async () => {
+  const productMock = {
+    "id" : "jhhh-crd",
+    "name" : "Prestamos en Crypto",
+    "description" : "Prestamos en Crypto",
+    "logo" : "https://www.visa.com.ec/dam/VCOM/regional/lac/SPA/Default/Pay%20With%20Visa/Tarjetas/visa-signature-400x225.jpg",
+    "date_release" : "2023-06-01",
+    "date_revision" : "2024-06-01"
+  };
+  const scope = nock(
+    "https://tribu-ti-staffing-desarrollo-afangwbmcrhucqfh.z01.azurefd.net/ipf-msa-productosfinancieros/bp"
+  )
+    .post("/products")
+    .once()
+    .reply(200, {
+      data: "response",
+    });
+  
+});
+
+test("Consume API with PUT", async () => {
+  const productMock = {
+    "id" : "jhhh-crd",
+    "name" : "Prestamos en Crypto",
+    "description" : "Prestamos en Crypto",
+    "logo" : "https://www.visa.com.ec/dam/VCOM/regional/lac/SPA/Default/Pay%20With%20Visa/Tarjetas/visa-signature-400x225.jpg",
+    "date_release" : "2023-06-01",
+    "date_revision" : "2024-06-01"
+  };
+
+  const scope = nock(
+    "https://tribu-ti-staffing-desarrollo-afangwbmcrhucqfh.z01.azurefd.net/ipf-msa-productosfinancieros/bp"
+  )
+    .put("/products")
+    .once()
+    .reply(200, {
+      data: "response",
+    });
+  
+});
+test("Consume API with PUT", async () => {
+  const productMock = {
+    "id" : "jhhh-crd",
+    "name" : "Prestamos en Crypto",
+    "description" : "Prestamos en Crypto",
+    "logo" : "https://www.visa.com.ec/dam/VCOM/regional/lac/SPA/Default/Pay%20With%20Visa/Tarjetas/visa-signature-400x225.jpg",
+    "date_release" : "2023-06-01",
+    "date_revision" : "2024-06-01"
+  };
+
+  const scope = nock(
+    "https://tribu-ti-staffing-desarrollo-afangwbmcrhucqfh.z01.azurefd.net/ipf-msa-productosfinancieros/bp"
+  )
+    .put("/products?id=jhhh-crd")
+    .once()
+    .reply(200, {
+      data: "response",
+    });
+  
+});
+
